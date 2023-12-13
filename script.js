@@ -64,17 +64,61 @@ document.addEventListener("DOMContentLoaded", function() {
     const userDetails = document.createElement('p');
     userDetails.textContent = `Followers: ${userObject.followers}, Following: ${userObject.following}`;
 
+    const repoCount = document.createElement('p');
+    repoCount.textContent = `Public Repositories: ${userObject.public_repos}`;
+
+    const location = document.createElement('p');
+    location.textContent = `Location: ${userObject.location}`;
+
+    const email = document.createElement('p');
+    email.textContent = `Email: ${userObject.email || 'Not available'}`;
+
+    const twitter = document.createElement('p');
+    twitter.textContent = `Twitter: ${userObject.twitter_username || 'Not available'}`;
+
     const bio = document.createElement('div');
     bio.className = 'bio';
 
     const bioText = document.createElement('p');
     bioText.textContent = userObject.bio;
 
+        // Specific repositories to display (replace these with the repositories you want)
+        const specificRepos = ['Naraka-AI', 'Dr.Bulba', 'dataStructuresMLB'];
+
+        const repoList = document.createElement('div');
+        repoList.className = 'repo-list';
+    
+        const heading = document.createElement('h2');
+        heading.textContent = 'Specific Repositories:';
+    
+        const ul = document.createElement('ul');
+    
+        specificRepos.forEach(repoName => {
+            fetch(`https://api.github.com/repos/${userObject.login}/${repoName}`)
+                .then(response => response.json())
+                .then(repo => {
+                    const li = document.createElement('li');
+                    const repoLink = document.createElement('a');
+                    repoLink.textContent = repo.full_name; // Display full name or customize as needed
+                    repoLink.href = repo.html_url;
+                    li.appendChild(repoLink);
+                    ul.appendChild(li);
+                })
+                .catch(error => console.error(`Error fetching ${repoName}:`, error));
+        });
+
     // Append elements to container
     container.appendChild(avatar);
     userInfo.appendChild(username);
     userInfo.appendChild(userDetails);
+    userInfo.appendChild(repoCount); // Adding repository count
+    userInfo.appendChild(location); // Adding location
+    userInfo.appendChild(email); // Adding email
+    userInfo.appendChild(twitter); // Adding Twitter handle
     container.appendChild(userInfo);
     bio.appendChild(bioText);
     container.appendChild(bio);
+    repoList.appendChild(heading);
+    repoList.appendChild(ul);
+    container.appendChild(repoList);
 });
