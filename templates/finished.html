@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+</head>
+<body>
+    <header class="top-bar" id="topBar">
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Unfinished Projects</a></li>
+                <li><a href="finished.html">Finished Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="spacer" style="height: 11vh;"></div>
+
+    <div class="blog-page">
+        <h1 class="raleway-default">Finished Projects</h1>
+        <div style="    display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 25px;">
+            <div class="content-projects" id="naraka-ai">
+                <div class="side-media">
+                    <img src="../assets/images/naraka-test.PNG" alt="data-model">
+                </div>
+                <div class="details">
+                    <h2 class="raleway-default"> Naraka AI</h2>
+                    <p>This project was in sync with a linear algebra class I was taking at the time where we learned many different methods to solving systems of equations with matrixes. In this particular example I wanted to explore the correlational data in a video game I played between pro teams, possibly even see if there was rationale for causation so that I could learn from it in my own play. Amidst the design I realized it would be beneficial to abstract alot of these methods in case either I found more features to add to the matrixes or I wanted to reuse the code for other projects. I ended up creating a small framework to help analyze statistics using <u>Least Square's Approximation</u> to varying polynomial degrees.</p>
+                    <div style="display: flex; align-items: flex-start; gap: 10px;">
+                        <a href="" class="btn">Reflection</a>
+                        <a href="https://github.com/Dokjahyung/Naraka-AI" class="btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-projects" id="Dr. Bulba">
+                <div class="side-media">
+                    <img src="../assets/images/dr-bulba.png" alt="bulb">
+                </div>
+                <div class="details">
+                    <h2 class="raleway-default"> Dr. Bulba</h2>
+                    <p> This project utilizes sklearn as well as opencv to do basic image recognition on plants with the intention to diagnose potential plant diseases.</p>
+                    <div style="display: flex; align-items: flex-start; gap: 10px;">
+                        <a href="" class="btn">Not uploaded yet</a>
+                        <a href="https://github.com/Dokjahyung/Dr.Bulba" class="btn">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="module" src="../assets/js/main.js"></script>
+    <script>
+        // Load reusable templates
+        document.getElementById("header").innerHTML = await (await fetch("templates/header.html")).text();
+        document.getElementById("footer").innerHTML = await (await fetch("templates/footer.html")).text();
+    </script>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Finished Projects</a></li>
+                <li><a href="#">Unfinished Projects</a></li>
+                <li><a href="#">About Me</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Contact Information</h4>
+            <p>Email: <a href="mailto:gsirvent@me.com">gsirvent@me.com</a></p>
+            <p>Phone: <a href="tel:+7147476563">+1 (714) 747-6563</a></p>
+            <p>Address: 1411 W Moraga Road, Fresno CA.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

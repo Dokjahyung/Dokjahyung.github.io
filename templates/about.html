@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+</head>
+<body>
+    <header class="top-bar" id="topBar">
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Unfinished Projects</a></li>
+                <li><a href="finished.html">Finished Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="spacer" style="height: 11vh;"></div>
+
+    <div class="blog-page">
+        <h1 class="raleway-default">Welcome to My Website</h1>
+    
+        <div class="content" style="min-width: 100%;">
+            <div class="details">
+                <h1 class="raleway-default" style="color: #d3d9d4;">About Me</h1>
+                <img src="../assets/images/audrey-karaoke.gif" class="about-image" alt="Profile Image">
+                <p class="blog-p raleway-default">Hello! my name is Gabriel Sirvent, a passionate software engineer with a strong background in Information Technology as well as gaming consulting and math. I’ve been trying to hone my craft in preparation for this life long career by attempting my own projects as well as learning through a wide selection of books. My goal is to continuously evolve in my craft, ensuring that every project I undertake reflects both innovation and precision.</p>
+                
+                <p class="blog-p">My journey began with a curiosity for statistics and models that can help users predict future outcomes whether that is in the stock market, where oil resevoirs might be, or how pro teams might behave in their seasons. Although I might not know enough to be an expert I know that with a great work environment I can contribute and develop myself to be one.</p>
+    
+                <p class="blog-p">When working with clients, my focus is always on delivering tailored solutions that meet their unique needs. I believe in collaboration and communication, ensuring that I’m not just creating for you, but with you. My approach is always user-centric—whether I’m designing a website, building an application, or developing a brand, I aim to create something that connects with the audience and leaves a lasting impact.</p>
+                
+                <p class="blog-p">Beyond my technical abilities, I take pride in my ability to think critically, solve problems efficiently, and continuously improve my skill set. I love taking on new challenges and am always looking for opportunities to expand my knowledge. I think this is seen through my success in gaming. I played competitively in a few games but ultimately because of this was able to land consulting gigs because of my attention to detail and understanding of what attracts competitive gamers like myself.</p>
+    
+                <p class="blog-p">In my free time, I enjoy gaming and reading. These passions not only provide balance in my life but also inspire me creatively in my work.</p>
+
+                <p class="blog-p">Some games I have a love for are Lego Universe, Naraka Bladepoint, Team Fight Tactics, and a new one called Deadlock. I have been reading anything from introductory books on web security to something as fun natured as manhwa and light novels. Lately I have bought my first book of warhammer and enjoy it so far.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="module" src="../assets/js/main.js"></script>
+    <script>
+        // Load reusable templates
+        document.getElementById("header").innerHTML = await (await fetch("templates/header.html")).text();
+        document.getElementById("footer").innerHTML = await (await fetch("templates/footer.html")).text();
+    </script>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Finished Projects</a></li>
+                <li><a href="#">Unfinished Projects</a></li>
+                <li><a href="#">About Me</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Contact Information</h4>
+            <p>Email: <a href="mailto:gsirvent@me.com">gsirvent@me.com</a></p>
+            <p>Phone: <a href="tel:+7147476563">+1 (714) 747-6563</a></p>
+            <p>Address: 1411 W Moraga Road, Fresno CA.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

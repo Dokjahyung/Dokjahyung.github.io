@@ -1,0 +1,239 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* Default Body Style */
+body {
+    color: blanchedalmond; /* Dark gray for readability */
+    background-color: #2e3944; /* Light gray background */
+    padding: 20px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.large-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #2e3944;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    transform: opacity 0.5s ease;
+}
+
+.large-section .content {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    z-index: 1px;
+    text-align: center;
+    padding: 20px;
+    color: aliceblue;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #124e66; /*transparent black background*/
+    color: #d3d9d4;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 15px; /*if this is not specified left arrow bugs*/
+    padding: 15px;
+    border-radius: 25%;
+    transition: background-color 0.3s ease;
+
+    pointer-events: all;
+}
+
+.arrow.left{
+    left: 10px; 
+}
+
+.arrow.right{
+    right: 10px;
+}
+
+.gallery-container{
+    margin: 50px auto;
+    width: 70%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    z-index: 15px;
+    /*cursor: pointer;*/
+}
+
+.gallery-item {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item.active{
+    opacity: 1;
+}
+
+.content{
+    display: flex;
+    align-items: flex-start;
+    background-color: #124e66;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px; /*prevent to wide of screens from showing stretched out item*/
+}
+
+.content-projects{
+    display: flex;
+    background-color: #124e66;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /*prevent to wide of screens from showing stretched out item*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.content-projects:hover {
+    transform: scale(1.05); /* Increases the size by 5% */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow effect */
+}
+.side-media img{
+    max-width: 500px;
+    max-height: 350px;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.thumbnail img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.details h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.details p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #d3d9d4;
+
+}
+
+.details .btn {
+    padding: 10px 20px;
+    width: 50%;
+    background-color: #2e3944;
+    color: #d3d9d4;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.details .btn:hover {
+    background-color: #d3d9d4;
+    color: #212a31;
+}
+
+/*Indicators*/
+.indicators {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #d3d9d4;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #212a31;
+}
+
+.blog-page {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 20px 100px 20px 100px;
+    background-color: #2e3944;
+    min-height: 80vh;
+    border-radius: 15px;
+}
+
+
+/* Remove any flexbox styling from .details */
+.details-test {
+    overflow: hidden; /* Ensures layout is cleared after floating elements */
+}
+
+/* Image styling */
+.about-image {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%); /* Float the image to the left */
+    margin-right: 20px; /* Space between the image and text */
+    width: 200px; /* Set the width of the image */
+    border-radius: 10px; /* Optional: Round the corners of the image */
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+/* Paragraph styling */
+.blog-p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Clear floats after content */
+.details::after {
+    content: "";
+    display: block;
+    clear: both;
+}

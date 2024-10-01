@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <h1 class="raleway-default">Welcome to My Website</h1>
+</head>
+<body>
+    <header class="top-bar" id="topBar">
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Unfinished Projects</a></li>
+                <li><a href="templates/finished.html">Finished Projects</a></li>
+                <li><a href="templates/about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="large-section">
+        <video autoplay muted loop paysinline id="background-video">check
+            <source src="assets/images/index-banner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content" style="background-color: #212a31; width: 45%; position: absolute; top: 50%; height: fit-content;">
+            <div class="details">
+                <p class="raleway-menu">Hi, I’m Gabriel, a passionate <u>Software Engineer</u>. I strive to create solutions that are not only visually appealing but also user-friendly and efficient.</p>
+                <p class="raleway-menu">Throughout my journey, I’ve had the pleasure of working on a wide range of projects that showcase my skills in web design, machine learning, and server/networking. I believe in the power of collaboration, creativity, and continuous learning to drive impactful results.</p>
+                <p class="raleway-menu">Explore my work, learn more about my background, and feel free to reach out if you'd like to collaborate or have any questions!</p>
+            </div>
+        </div>
+    </div>
+    <div class="gallery-container">
+        <h1>Interesting Projects</h1>
+        <div class="gallery-item active" id="naraka-ai">
+            <div class="content">
+                <div class="thumbnail">
+                    <img src="assets/images/data-model.png" alt="data-model">
+                </div>
+                <div class="details">
+                    <h2>Advanced Statistical Modeling</h2>
+                    <p>With in depth research on Least Squares approximations and Linear Algebra, I created a small framework to model abstract amounts of features to predict future desired variables.</p>
+                    <p>A fun application of this was also elaborated on and I created a front end to showcase the functionality</p>
+                    <a href="" class="btn">Not uploaded yet</a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item" id="ice-cream-ai">
+            <div class="content">
+                <div class="thumbnail">
+                    <img src="assets/images/ice-cream-ai.png" alt="ice-cream-ai">
+                </div>
+                <div class="details">
+                    <h2>Ice Cream Machine Learning</h2>
+                    <p>Using sk-learn library to create a model to predict user's perfect ice cream flavor based off of questions asked.</p>
+                    <a href="" class="btn">Not Added</a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item" >
+            <div class="content">
+                <div class="thumbnail">
+                    <img src="assets/images/dr-bulba.png" alt="dr-bulba">
+                </div>
+                <div class="details">
+                    <h2>Dr. Bulba Image Recognition</h2>
+                    <p>Continued sk-learn research with image rgb data statistics</p>
+                    <p>Analyzing plant photo datasets to determine plant health</p>
+                    <a href="" class="btn">Not Added</a>
+                </div>
+            </div>
+        </div>
+        <button class="arrow left" aria-label="Previous Image">&lt;</button>
+        <button class="arrow right" aria-label="Next Image">&gt;</button>
+        <div class="indicators">
+            
+        </div>
+    </div>
+
+    
+    <script type="module" src="assets/js/main.js"></script>
+    <script>
+        // Load reusable templates
+        document.getElementById("header").innerHTML = await (await fetch("templates/header.html")).text();
+        document.getElementById("footer").innerHTML = await (await fetch("templates/footer.html")).text();
+    </script>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Finished Projects</a></li>
+                <li><a href="#">Unfinished Projects</a></li>
+                <li><a href="#">About Me</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h4>Contact Information</h4>
+            <p>Email: <a href="mailto:gsirvent@me.com">gsirvent@me.com</a></p>
+            <p>Phone: <a href="tel:+7147476563">+1 (714) 747-6563</a></p>
+            <p>Address: 1411 W Moraga Road, Fresno CA.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

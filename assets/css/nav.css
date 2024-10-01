@@ -1,0 +1,87 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Bar Styling */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #212a31;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: padding 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    height: 80px; /* Default height */
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    transition: height 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links ul li {
+    margin: 0 1rem;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem; /* Default font size */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease, font-size 0.1s ease, color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    background-color: #d3d9d4;
+    color: #212a31;
+    border-radius: 4px;
+    font-size: 1.25rem; /* Default font size */
+}
+
+/* Shrinking Effect */
+.shrunk {
+    padding: 0.1rem 1rem;
+    height: 60px; /* Height after shrinking */
+    background-color: #222; /* Optional: darken background on shrink */
+}
+
+.shrunk .logo img {
+    height: 10px; /* Shrink logo size */
+}
+
+.shrunk .nav-links ul li a {
+    font-size: 0.875rem; /* Shrink text size */
+}
+
+/* Content Padding (to account for the fixed top bar) */
+.content {
+    padding-top: 100px;
+}
+
+/* Optional: Styling for responsive/mobile view */
+@media (max-width: 768px) {
+    .nav-links ul {
+        display: none;
+    }
+}
